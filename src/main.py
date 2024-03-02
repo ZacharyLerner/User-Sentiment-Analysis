@@ -19,7 +19,7 @@ def store_data(file1_name, file2_name):
     sentiment_df = pd.DataFrame([sentiment_counts1, sentiment_counts2], columns=["postive", "neutral", "negative"])
     sentiment_df.to_csv('data/emotions.csv', index=False)
 
-def call_data(file_name):
+def compare_data_two_graphs(file_name):
     # load the data from the csv file
     df = pd.read_csv(file_name)
     # create two bar charts comparing the two videos
@@ -35,7 +35,25 @@ def call_data(file_name):
 
     # scale the y-axis to be the same for both charts
     plt.show()
+def compare_data_one_graph(file_name):
+    # load the data from the csv file
+    df = pd.read_csv(file_name)
+    emotion_diff = df.iloc[0] - df.iloc[1]
+    fig, ax = plt.subplots()
+    ax.bar(['Positive', 'Neutral', 'Negative'], emotion_diff, color=['blue', 'green', 'red'])
+    ax.set_title('Difference in Emotions')
+    ax.set_ylim(min(emotion_diff)-1, max(emotion_diff)+5)
+    ax.axhline(0, color='black', linewidth=1)
+    plt.show()
 
+    # 
+    ax.bar(['Positive', 'Neutral', 'Negative'], df.iloc[0], color=['blue', 'green', 'red'])
+    ax.bar(['Positive', 'Neutral', 'Negative'], df.iloc[1], color=['blue', 'green', 'red'])
+    ax.set_title('Coding Tutorial')
+    ax.set_ylim(0, 70)  # scale the y-axis to be the same for both charts
+
+    # scale the y-axis to be the same for both charts
+    plt.show()
 
 file1_name = 'data/comments1.csv'
 file2_name = 'data/comments2.csv'
@@ -44,7 +62,7 @@ link2 = 'tgKdF8vwUco'
 
 #collect_data(file1_name, file2_name, link1, link2)
 #store_data(file1_name, file2_name)
-call_data('data/emotions.csv')
+compare_data_one_graph('data/emotions.csv')
 
 
 
