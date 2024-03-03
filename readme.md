@@ -64,8 +64,28 @@ The data can also easily be changed into the difference in sentiment can be disp
 
 A secondary use of the model can be to view how sentiment can change over time. I did this by create sentiment totals for a time period, where the numbers is added or subtracted depending on sentiment. 
 
-I also used these data points to create a line of best fit to predict how the sentiment may continue to change in the future. 
+I also used these data points to create a line of best fit to predict how the sentiment may continue to change in the future. It allows for trends to be observed in periods of years, months, days, or hours.
 
-The example below shows the trend for this youtube video
+The example below shows the trend for this educational youtube video on led lights:
 
 [![Video 3](data/output_graphs/AF8d72mA41M-MQ.jpg)](https://www.youtube.com/watch?v=AF8d72mA41M&ab_channel=Veritasium)
+
+### Sentiment for each day since the video was released
+
+![Figure 2](data/output_graphs/Figure_3.png)
+
+It can be observed that initial sentiment is extremely high but then falls off, eventually reaching neutral levels. 
+
+This seems logical as initial viewers are often loyal subscribers. 
+
+## Improvements that could be made
+While I am very pleased with the results of this project there are a few pitfalls
+- The model is not very well trained and has an accuracy of about 80%
+- The models seems to skew towards catagorizing neutral or sarcastic comments as negative. 
+- Speed of predictions slows down heavily on larger data sets
+
+Solutions
+- The model currently does not do anything with the evaluations of its accuracy, this could be adapted to train the model over many generations to achieve a much higher accuracy
+- I could introduce other data sets such as the sarcasm predictor to shows their influence on user sentiment. 
+
+### Project created by Zachary Lerner 3/3/24
