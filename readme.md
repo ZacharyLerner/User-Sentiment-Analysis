@@ -59,3 +59,13 @@ The data can also easily be changed into the difference in sentiment can be disp
 
 
 ![Figure 2](data/output_graphs/Figure_2.png)
+
+## Viewing Trends
+
+A secondary use of the model can be to view how sentiment can change over time. I did this by create sentiment totals for a time period, where the numbers is added or subtracted depending on sentiment. 
+
+I also used these data points to create a line of best fit to predict how the sentiment may continue to change in the future. 
+
+The example below shows the trend for this youtube video
+
+[![Video 3](data/output_graphs/AF8d72mA41M-MQ.jpg)](https://www.youtube.com/watch?v=AF8d72mA41M&ab_channel=Veritasium)

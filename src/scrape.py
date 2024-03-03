@@ -93,3 +93,5 @@ def scrape_comments(video_id, max_results, file_name):
 
     # save the data to a csv file based on the inputed file name
     df.to_csv(file_name, index=False)
+
+scrape_comments('AF8d72mA41M', 500, 'data/comments3.csv')
