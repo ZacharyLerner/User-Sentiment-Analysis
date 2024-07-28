@@ -27,7 +27,7 @@ def clean_comments(df):
 def scrape_comments(video_id, max_results, file_name):
     api_service_name = "youtube"
     api_version = "v3"
-    DEVELOPER_KEY = 'AIzaSyCYzgg-KX_qK3QTpK_0Ntag4uJbnt-qpTM'
+    DEVELOPER_KEY = #key
 
     youtube = googleapiclient.discovery.build(
         api_service_name, api_version, developerKey=DEVELOPER_KEY)
